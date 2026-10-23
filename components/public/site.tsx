@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Clock, MapPin, Phone, Plus, Scissors } from 'lucide-react';
-import { openingHours, salon, services, staff } from '../../lib/config';
+import { legal, openingHours, salon, services, staff } from '../../lib/config';
 import { time } from '../../lib/time';
 import { BookingDialog } from './booking-dialog';
 import Link from 'next/link';
@@ -97,7 +97,11 @@ export default function PublicSite() {
       <footer>
         <Link className='brand' href='/'>STUDIO <strong>SP</strong></Link>
         <span>© {new Date().getFullYear()} {salon.name} · {salon.address}</span>
-        <a className='management-link' href='/privacidade'>Privacidade</a>
+        <nav className='footer-links' aria-label='Informação legal'>
+          <a href={legal.complaintsBookUrl} target='_blank' rel='noreferrer'>Livro de Reclamações</a>
+          <Link href='/informacao-legal'>Informação legal</Link>
+          <Link href='/privacidade'>Privacidade</Link>
+        </nav>
         <a className='management-link' href='/entrar'>Área da equipa</a>
       </footer>
       {booking && <BookingDialog key={booking.n} initialService={booking.service} onClose={() => setBooking(null)} />}

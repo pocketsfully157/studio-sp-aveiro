@@ -51,7 +51,8 @@ Os dados em `lib/config.ts` são **provisórios** e têm de ser substituídos pe
 - equipa: nome, especialidade, cor na agenda e horário próprio opcional (`hours`);
 - serviços: duração, preço, texto de preço variável (`priceNote`) e quem os faz;
 - horário de abertura, feriados e férias (`closedDates`);
-- regras: antecedência mínima, máximo de dias, prazo para cancelar e quando enviar o lembrete.
+- regras: antecedência mínima, máximo de dias, prazo para cancelar e quando enviar o lembrete;
+- `legal`: ligação ao Livro de Reclamações e entidade de resolução alternativa de litígios. O CNIACC está como provisório; confirmar se há um centro de arbitragem competente para Aveiro. Estes dados aparecem em `/informacao-legal` e no rodapé.
 
 Reveja também o texto de `app/privacidade/page.tsx` e a fotografia `public/salon.jpg` (provisória; fotografia de Guilherme Petri, Unsplash).
 
