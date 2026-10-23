@@ -1,0 +1,17 @@
+# Copie para .dev.vars (desenvolvimento). Em produção use `npx wrangler secret put NOME`.
+
+# Endereço do site usado nos links das mensagens (em produção está em wrangler.jsonc).
+SITE_URL=http://localhost:5173
+
+# Código pedido em /configurar para criar a primeira conta de gerência.
+SETUP_TOKEN=troque-por-um-codigo-longo
+
+# Email (https://resend.com) — opcional
+RESEND_API_KEY=
+EMAIL_FROM=STUDIO SP <marcacoes@studiosp.pt>
+
+# SMS / WhatsApp (https://twilio.com) — opcional
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_SMS_FROM=
+TWILIO_WHATSAPP_FROM=

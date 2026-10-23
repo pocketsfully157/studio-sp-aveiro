@@ -1,2 +1,5 @@
-import SalonApp from '../components/salon-app';
-export default function Page(){return <SalonApp/>}
+import PublicSite from '../components/public/site';
+
+export default function Page() {
+  return <PublicSite />;
+}
