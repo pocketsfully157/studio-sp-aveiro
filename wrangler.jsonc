@@ -1,0 +1,25 @@
+// Configuração Cloudflare Workers do STUDIO SP.
+// Antes de publicar: `npx wrangler d1 create studio-sp-aveiro` e copiar o
+// `database_id` devolvido para baixo. Ver README.md › Publicar.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "studio-sp-aveiro",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "studio-sp-aveiro",
+      "database_id": "00000000-0000-4000-8000-000000000000",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  // Lembretes: verifica de 15 em 15 minutos quem tem marcação nas próximas 24 h.
+  "triggers": { "crons": ["*/15 * * * *"] },
+  "vars": {
+    // Endereço público do site (links enviados às clientes). Em desenvolvimento, .dev.vars sobrepõe-se.
+    "SITE_URL": "https://www.studiosp.pt"
+  },
+  "observability": { "enabled": true }
+}
