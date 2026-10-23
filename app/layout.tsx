@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+// Fontes servidas pelo próprio site (sem pedidos à Google).
+import "@fontsource-variable/dm-sans";
+import "@fontsource-variable/playfair-display";
+import "@fontsource-variable/playfair-display/wght-italic.css";
 import "./globals.css";
 
 export const metadata: Metadata = {

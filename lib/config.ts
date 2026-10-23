@@ -47,6 +47,22 @@ export const salon = {
   timeZone: 'Europe/Lisbon',
 };
 
+/** Informação obrigatória para sites de empresas com clientes consumidores (Portugal). */
+export const legal = {
+  /** Livro de Reclamações Eletrónico (DL 156/2005, alterado pelo DL 74/2017). */
+  complaintsBookUrl: 'https://www.livroreclamacoes.pt/Inicio/',
+  /**
+   * Entidade de Resolução Alternativa de Litígios de consumo (Lei 144/2015).
+   * CONFIRMAR com o salão: o CNIACC é o centro de competência residual; se
+   * existir um centro de arbitragem que cubra Aveiro, indicar esse.
+   */
+  disputeResolution: {
+    name: 'CNIACC – Centro Nacional de Informação e Arbitragem de Conflitos de Consumo',
+    url: 'https://www.cniacc.pt',
+  },
+  consumerPortalUrl: 'https://www.consumidor.gov.pt',
+};
+
 /** Horário de abertura do salão. Domingo e segunda fechado. */
 export const openingHours: WeeklyHours = {
   0: [],
